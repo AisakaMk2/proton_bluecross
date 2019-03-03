@@ -563,7 +563,7 @@ void __init setup_nr_cpu_ids(void)
 	nr_cpu_ids = find_last_bit(cpumask_bits(cpu_possible_mask),NR_CPUS) + 1;
 }
 
-static inline bool boot_cpu(int cpu)
+bool boot_cpu(int cpu)
 {
 	if (!have_boot_cpu_mask)
 		return true;
